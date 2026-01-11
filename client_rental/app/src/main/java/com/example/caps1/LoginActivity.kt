@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
 
             // 노트북의 실제 IP 주소로 변경
             val retrofit = Retrofit.Builder()
-                    .baseUrl("http://192.168.1.53:2454/") // 노트북의 IP 주소 사용
+                    .baseUrl("http://IP:PORT/") // 실행 시 환경에 맞게 IP와 PORT를 수정하여 사용
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
 
@@ -92,4 +92,5 @@ class LoginActivity : AppCompatActivity() {
 
 
 //로컬 개발 시 내부 아이피 등록 *network_security_config도 필수*
+
 
