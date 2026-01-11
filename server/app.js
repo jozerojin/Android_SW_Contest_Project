@@ -8,22 +8,22 @@ const cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
-const PORT = 2454;
+const PORT = PORT; // 실행 시 환경에 맞게 PORT를 수정하여 사용
 
 let items = []; // 항목을 저장할 배열
 
 // 가정한 유저 정보 (실제로는 데이터베이스에서 가져와야 함)
 const users = [
   {
-    username: '20204585',
+    username: 'test_user1',
     passwordHash: '$2b$10$PH/S00yKdpF3uTxqPZpjm.EAPP51KPpwT7EqsxPi.Cq7e7ust55Wm' // bcrypt 해시된 비밀번호: 'password1'
   },
   {
-    username: '20214586',
+    username: 'test_user2',
     passwordHash: '$2b$10$qUhby1DMbfy0KzMVQxxv3uzB.X3.8aFOQiUXTm.Gs25BJ71AaT5.e' // bcrypt 해시된 비밀번호: 'password2'
   },
   {
-    username: '20194690',
+    username: 'test_user3',
     passwordHash: '$2b$10$r22SaGTBACJ5RnLcWnfoxO/wEJW.CZO6JHfHpqZzHSEe4tLlLzUg.' // bcrypt 해시된 비밀번호: 'password3'
   }
 ];
@@ -118,3 +118,4 @@ wss.on('connection', ws => {
 server.listen(PORT, () => {
   console.log(`서버가 포트 ${PORT}에서 실행 중...`);
 });
+
