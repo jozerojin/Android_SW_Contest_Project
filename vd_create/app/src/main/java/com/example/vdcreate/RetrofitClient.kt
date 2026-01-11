@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "http://192.168.1.15:2454"
+    private const val BASE_URL = "http://IP:PORT" // 실행 시 환경에 맞게 IP와 PORT를 수정하여 사용
 
     val apiService: ApiService by lazy {
         Retrofit.Builder()
@@ -16,3 +16,4 @@ object RetrofitClient {
 }
 
 //Retrofit 설정
+
